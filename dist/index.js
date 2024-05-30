@@ -1,8 +1,9 @@
 const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const dotEnv = require('dotenv').config();
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 6969;
 const VARIABLES = {
     URL: "https://rakhdeba.com/",
     SELECTOR: ".posts > article",
